@@ -1,1 +1,1 @@
-# Jogo-impar-par
+# treinamento-python
