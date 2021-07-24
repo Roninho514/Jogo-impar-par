@@ -1,22 +1,31 @@
-from random import randint
-print(10*'#=#')
-print('Bem vindo ao jogo de advinhação!')
-print(10*'#=#')
-vidas = 5
-numeroSecreto = randint(0,100)
-while vidas > 0:
-    chute = int(input('Digite um numero: '))
-    print(f'Você digitou o número {chute}')
-    if vidas > 0 and chute == numeroSecreto:
-        print('Você acertou!!')
+print("*********************************")
+print("Bem vindo ao jogo de Adivinhação!")
+print("*********************************")
+
+numero_secreto = 42
+total_de_tentativas = 3
+
+for rodada in range(1, total_de_tentativas + 1):
+    print("Tentativa {} de {}".format(rodada, total_de_tentativas))
+    chute_str = input("Digite um número entre 1 e 100: ")
+    print("Você digitou " , chute_str)
+    chute = int(chute_str)
+
+    if(chute < 1 or chute > 100):
+        print("Você deve digitar um número entre 1 e 100!")
+        continue
+
+    acertou = chute == numero_secreto #Vai receber true ou false
+    maior   = chute > numero_secreto
+    menor   = chute < numero_secreto
+
+    if(acertou):
+        print("Você acertou!")
         break
-    elif vidas > 0 and chute > numeroSecreto or chute < numeroSecreto:
-        if numeroSecreto > chute:
-            print('Mais...')
-            vidas -= 1
-        else:
-            print('Menos')
-            vidas -= 1
-if vidas == 0:
-    print(f'Você perdeu!! era o número {numeroSecreto}')
-print('Fim do programa!')
+    else:
+        if(maior):
+            print("Você errou! O seu chute foi maior do que o número secreto.")
+        elif(menor):
+            print("Você errou! O seu chute foi menor do que o número secreto.")
+
+print("Fim do jogo")
