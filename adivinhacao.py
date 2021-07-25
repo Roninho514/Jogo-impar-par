@@ -33,6 +33,7 @@ def jogar():
 
         if(acertou):
             print("Você acertou!")
+            print(f'Score: {pontos}')
             break
         else:
             if(maior):
@@ -42,3 +43,5 @@ def jogar():
             pontos_perdidos = abs(numero_secreto - chute)
             pontos -= pontos_perdidos
     print("Fim do jogo")
+if(__name__ == '__main__'):
+    jogar()
