@@ -1,0 +1,11 @@
+quant = int(input('Digite a quantidade de termos que você quer ver: '))
+c = 3
+t1 = 0
+t2 = 1
+print(t1, t2 , end=' ')
+while c <= quant:
+    fn = t1 + t2
+    print(fn, end = ' ')
+    t1 = t2
+    t2 = fn
+    c += 1

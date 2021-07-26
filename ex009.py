@@ -1,0 +1,6 @@
+print('{==============calculadora============')
+num = int(input('Digite um número:'))
+print('{} x 1 = {}\n{} x 2 = {}\n{} x 3 = {}'.format(num, num*1, num, num*2, num, num*3))
+print('{} x 4 = {}\n{} x 5 = {}\n{} x 6 = {}'.format(num, num*4, num, num*5, num, num*6))
+print('{} x 7 = {}\n{} x 8 = {}\n{} x 9 = {}'.format(num, num*7, num, num*8, num, num*9))
+print('{} x 10 = {}'.format(num, num*10))
